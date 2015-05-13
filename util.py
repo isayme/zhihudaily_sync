@@ -19,6 +19,7 @@ def download(url, upload=True, check_exists=True, prefix=''):
     
     if check_exists and os.path.exists(path):
         print path, 'exists'
+        upload = False
         with open(path, 'rb') as f:
             data = f.read()
     else:
